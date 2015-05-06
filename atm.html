@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>umb</title>
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/movies-app.css">
+
+ 
+
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+  
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+
+
+	
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+</script>
+    
+    
+	  <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/simple-app.css">
+	  <!---<script src="intelxdk.js"></script>
+<script src="xhr.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+
+  <!-- <script type="text/javascript" language="javascript">
+$(document).ready(function(){
+
+    $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+});
+   </script>  -->
+
+
+
+
+   <script>
+    $(document).bind("mobileinit", function(){
+    $.mobile.allowCrossDomainPages = true;
+    });
+ </script>
+   <script type="text/javascript" language="javascript">
+
+
+    
+
+   
+   $(document).ready(function() {
+
+      //$("#driver").click(function(event){
+          $.getJSON('getdata.php', function(jd) {
+          $.each(jd, function(index, item){
+
+            //var anchor = document.getElementById('stage1');
+    //var id = $('#stage1').attr('id');
+              
+             $('#stage1').append(  /*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     ' <div class="boxers">  <a href= "detail.html?id=' +jd[index].id+ '"> <div class="article-img-pane" style="margin-bottom:10px;"><img src= "'+ jd[index].img +'" ></div></a><a href= "detail.html?id=' +jd[index].id+ '"><h2 style="text-transform:capitalize;font-weight:bold;margin-bottom:10px;width:100%;color:#00acef;height:10%"> ' + jd[index].newsheader + ' </h2></a><p style="font-size:14px;color:#514f4f;font-weight:normal;">   <img style="width:15px;height:15px;margin-left:5px" src="img/cal.png"/>'+ jd[index].date+ '<p> </div>');
+
+
+
+
+
+
+             //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
+             //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
+        //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
+       
+          });
+      });
+   });
+   
+   
+  
+   </script>
+
+
+</head>
+
+<style>
+
+
+.back{
+  background: url(img/back.png);
+  width:160px;
+  height: 30px;
+  float:left;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 10px;
+  cursor: pointer;
+  
+  }
+  
+  .menu{
+  background: url(img/menu.png);
+  width:30px;
+  height: 30px;
+  float:right;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right:10px;
+  
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  }
+
+</style>
+ 
+
+
+
+<body>
+<div id="header" class="header" style="display:none;width:0;height:0;"> </div>
+
+
+
+		
+            <div class="header">
+<a href="index.html"><div class="back"></div></a>
+
+<a href="settings.html"><div class="menu"></div></a>
+
+<!-- <h1 style="margin-left:120px;font-size:20px;margin-top:17px;color:#fff;font-weight:normal;position:absolute;top:-5px;">News Feed</h1> -->
+</div>
+			
+				
+				
+
+
+
+
+
+
+
+	 <div class="swiper-container swiper-content" style="overflow-y:auto;  ">
+
+
+
+
+
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="overflow-y:auto;  ">
+        <div class="inner">
+
+
+
+         
+<!--<div class="search">
+         <div class="lighter">
+<form id="#search">
+  <span><input type="text" class="search rounded" placeholder="Search per Mood...">
+    <!--<input type="submit" style="background:url(img/search.png);width:42px;height:42px;margin-top:-10px;">-->
+   <!-- </span>
+  
+</form>
+
+</div>
+
+
+
+</div>-->
+            <div id="content" >
+                                
+                                
+         
+<br>
+<div id="txtHint"><!--<b>Loading Today's Hapn'n..... </b>--></div>
+
+        
+
+<!--<div class="boxers">
+
+
+</div>-->
+ 
+                
+               
+<p><strong>Greater Accra Region</strong></p>
+<table align="left" border="1" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><td style="height:113px; width:324px">
+<p>Abeka Lapaz Branch</p>
+<p>Former Bambolino Restaurant</p>
+<p>Accra- Akweteman Road</p>
+<p>Abeka Lapaz, Accra</p>
+<p>T +233 (0) 302 420070 – 5, +233</p>
+<p>(0) 302 420075</p>
+<p> </p>
+</td>
+<td style="height:113px; width:372px">
+<p>Tema Main  Branch</p>
+<p>Off Fishing Harbour Road</p>
+<p>Opposite Maersk, Tema</p>
+<p>T +233 (0) <strong>244 335939, +233 (0) 244 335941             </strong></p>
+<p>F +233 (0) 303 202211</p>
+</td>
+</tr><tr><td style="height:44px; width:324px">
+<p>Alajo (Agency)</p>
+<p>Star Oil refueling Service Station</p>
+<p> </p>
+</td>
+<td style="height:44px; width:372px">
+<p>Nima (Agency)</p>
+<p>House No. 114/12</p>
+<p> </p>
+</td>
+</tr><tr><td style="height:47px; width:324px">
+<p>Darkuman (Agency)</p>
+<p>Shop No.3,</p>
+<p>Darkuman High Street</p>
+<p> </p>
+</td>
+<td style="height:47px; width:372px">
+<p>Odorkor (Agency)</p>
+<p>No. 9 at House No. B158/11</p>
+<p>Kwashieman Road, Odorkor, Accra.</p>
+<p> </p>
+</td>
+</tr><tr><td style="height:101px; width:324px">
+<p>Kaneshie Branch</p>
+<p>Winneba Road</p>
+<p>Near Pamprom Traffic Light</p>
+<p>Kaneshie, Accra</p>
+<p>T +233 (0) 302 662370 , +233 (0) 302 662399</p>
+<p>F +233 (0) 302 672351</p>
+</td>
+<td style="height:101px; width:372px">
+<p>Achimota  Branch</p>
+<p>Nsawam Road</p>
+<p>Achimota, Accra</p>
+<p>T +233 (0) 302 41908 0 - 3</p>
+<p>+233 (0) 302 419085</p>
+</td>
+</tr><tr><td style="height:113px; width:324px">
+<p>Kantamanto  Branch</p>
+<p>Tarzan House</p>
+<p>Kantamanto Market, Accra</p>
+<p>T +233 (0) 302 673521, +233 (0) 302 673286</p>
+<p>F +233 (0) 302 673230</p>
+<p> </p>
+</td>
+<td style="height:113px; width:372px">
+<p>Ashaiman  Branch</p>
+<p>Accra-Ada Road</p>
+<p>Ashaiman</p>
+<p>T +233 (0) 303 300124, + 233 (0) 303 300122,</p>
+<p>F +233 (0) 303 300102</p>
+</td>
+</tr><tr><td style="height:125px; width:324px">
+<p>Osu Oxford Street Branch</p>
+<p>41 Cantonments Road</p>
+<p>Next to Osu Food Court</p>
+<p>Oxford Street, Osu</p>
+<p>T +233 (0) 302 774290</p>
+<p> </p>
+</td>
+<td style="height:125px; width:372px">
+<p>Kaneshie Post  Office  Branch</p>
+<p>General Post Office Premises</p>
+<p>Kaneshie, Accra</p>
+<p>T +233 (0) 302 247849, +233 (0) 289 555433</p>
+<p>F +233 (0) 302 247850</p>
+</td>
+</tr><tr><td style="height:106px; width:324px">
+<p>North Industrial Area  Branch</p>
+<p>Dadeban Road</p>
+<p>North Industrial Area, Accra.</p>
+<p>T +233 (0) 302 247855, +233 (0) 302 247944</p>
+<p>F +233 (0) 302 238157</p>
+</td>
+<td style="height:106px; width:372px">
+<p>Lashibi  Branch</p>
+<p>Adjacent UBI Petroleum</p>
+<p>Lashibi, Accra</p>
+<p>T +233 (0) 302 953910</p>
+</td>
+</tr></tbody></table><p> </p>
+<p>                              </p>
+<p> </p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:100%"><tbody><tr><td style="width:324px">
+<p>Tema Community 1 Branch</p>
+<p>Near the Market</p>
+<p>T +233 (0) 303 203095</p>
+<p> </p>
+</td>
+<td style="width:372px">
+<p>East Cantonment Branch</p>
+<p>9, La Tebu Crescent</p>
+<p>Near Burma Camp</p>
+<p>East Cantonments, Accra</p>
+<p>T +233 (0) 289 530150/ +233 (0) 307 010873</p>
+</td>
+</tr><tr><td style="width:324px">
+<p>Tema Industrial Area Branch</p>
+<p>On the Premises of TT Brothers</p>
+<p>Off the Tema – Aflao Road</p>
+<p>Tema</p>
+<p>T +233 (0) 289 557388</p>
+</td>
+<td style="width:372px">
+<p>Madina Branch</p>
+<p>Hollywood Shopping Centre</p>
+<p>Accra-Aburi Road</p>
+<p>Madina, Accra</p>
+<p>T +233 (0) 302 520709, +233 (0) 302 520725</p>
+<p>F +233 (0) 302 520715</p>
+</td>
+</tr><tr><td style="width:324px">
+<p>Airport Branch</p>
+<p>No. 34 Senchi Street</p>
+<p>Airport Residential Area, Accra</p>
+<p>T +233 (0) 302 736086 - 89</p>
+</td>
+<td style="width:372px">
+<p>Osu Watson House Branch</p>
+<p>Watson House</p>
+<p>Osu, La Road</p>
+<p>Accra</p>
+<p>T +233 (0) 302 779152, +233 (0) 302 779530,</p>
+<p>+233 (0) 244 335932</p>
+<p>F +233 (0) 302 784856</p>
+</td>
+</tr><tr><td style="width:324px">
+<p>Castle Road Branch</p>
+<p>Starlets ‘91 Road</p>
+<p>Opposite Accra Sports Stadium</p>
+<p>Osu, Accra</p>
+<p>T +233 (0) 302 661630,+233 (0) 302 666036</p>
+<p>F +233 (0) 302680499</p>
+</td>
+<td style="width:372px">
+<p>UPSA Branch</p>
+<p>UPSA Premises</p>
+<p>P. O. Box LG 149</p>
+<p>Legon, Accra</p>
+<p>T +233 (0) 289 559100, + 233 (0) 289 555653</p>
+<p>+233 (0) 302 522197 +233 (0) 302 522196</p>
+<p>F +233 (0) 302 522199</p>
+</td>
+</tr><tr><td style="width:324px">
+<p>Nima Branch</p>
+<p>House No. E2/11</p>
+<p>Parcel No. 816 Block 5</p>
+<p>Nima Roundabout</p>
+<p>Nima - Accra</p>
+<p>T +233 (0) 289 555654</p>
+</td>
+<td style="width:372px">
+<p>Okaishie Branch</p>
+<p>House No D767 /A</p>
+<p>Beach Avenue</p>
+<p>Tudu, Okaishie, Accra</p>
+<p>T +233 (0) 289 330050</p>
+</td>
+</tr><tr><td style="width:324px">
+<p>Ring Road Central Branch</p>
+<p>Ring Road Industrial Area North</p>
+<p>Ring Road Central, Accra</p>
+<p>T +233 (0) 302 254701, +233 (0) 302 254741</p>
+<p>+233 (0) 302 254738</p>
+</td>
+<td style="width:372px">
+<p>South Industrial Area Branch</p>
+<p>Sikkens House Old Fadama Road</p>
+<p>South Industrial Area, Accra</p>
+<p>T +233 (0) 302 781761, +233 (0) 302 784143</p>
+<p> </p>
+</td>
+</tr></tbody></table><p> </p>
+<p><strong>Ashanti Region</strong></p>
+<table border="1" cellpadding="0" cellspacing="0"><tbody><tr><td style="width:319px">
+<p>Alabar (Agency)</p>
+<p>House No. ZE Alabar,</p>
+<p>Kumasi</p>
+<p> </p>
+</td>
+<td style="width:319px">
+<p>Asafo Branch</p>
+<p>Off Otumfuo Osei Tutu II Blvd</p>
+<p>Asafo, Kumasi</p>
+<p>T +233 (0) 322 196894</p>
+</td>
+</tr><tr><td style="width:319px">
+<p>Suame Branch</p>
+<p>Offinso – Kumasi Road</p>
+<p>Suame, Kumasi</p>
+<p>T +233 (0) 322 083971 - 7</p>
+<p>F +233 (0) 322 083970</p>
+</td>
+<td style="width:319px">
+<p> </p>
+</td>
+</tr><tr><td style="width:319px">
+<p>Adum Branch</p>
+<p>Prempeh II Street</p>
+<p>Adum, Kumasi</p>
+<p>T +233 (0) 322 083871 - 7</p>
+<p>+233 (0) 322 083870</p>
+</td>
+<td style="width:319px">
+<p>New Amakom Branch</p>
+<p>Near Angola Traffic Light</p>
+<p>New Amakom, Kumasi</p>
+<p>T +233 (0) 322 049250 - 2</p>
+<p>+233 (0) 322 049253</p>
+</td>
+</tr></tbody></table><p> </p>
+<p> </p>
+<p><strong>Western Region</strong></p>
+<table border="1" cellpadding="0" cellspacing="0" style="width:660px"><tbody><tr><td style="width:312px">
+<p>Enchi Branch</p>
+<p>On the Enchi Main Road</p>
+<p>Adjacent the former Court Building</p>
+<p>Enchi</p>
+<p>T+233 (0) 312 190381, +233 (0) 312 190382</p>
+</td>
+<td style="width:348px">
+<p>Takoradi Branch</p>
+<p>House No PT 131</p>
+<p>Liberation Road</p>
+<p>Opposite Bank of Ghana</p>
+<p>T+233 (0) 312 032032</p>
+</td>
+</tr><tr><td style="width:312px">
+<p>Sefwi Wiawso Branch</p>
+<p>Opposite the Ghana COCOBOD office</p>
+<p>Sefwi - Mpomamu Road.</p>
+<p>T+233 (0) 322 192520</p>
+</td>
+<td style="width:348px">
+<p>Tarkwa Branch</p>
+<p>Post Office Road</p>
+<p>T +233 (0) 312 322606, +233 (0) 312 322619,</p>
+<p>+233 (0) 312 322616</p>
+<p>F +233 (0) 312 322593</p>
+</td>
+</tr></tbody></table><p> </p>
+<p> </p>
+<p> </p>
+<p><strong>Central Region</strong></p>
+<p>Kasoa Branch</p>
+<p>I See Shopping Mall</p>
+<p>Opposite Petrosol Filling Station</p>
+<p>Bawjiase Road - Kasoa.</p>
+<p>T+233 (0) 289 700506</p>
+<p> </p>
+<p>Kasoa (Agency)</p>
+<p>Kasoa High Tension</p>
+<p>off Kasoa Bawjiase Road</p>
+<p> </p>
+<p><strong>Northern Region</strong></p>
+<p>Tamale Branch</p>
+<p>No. 2 Bank Street</p>
+<p>Bank of Ghana Road, Tamale</p>
+<p>T +233 (0) 372 027212 - 5, +233 (0) 372 027127</p>
+<p>F +233 (0) 372 027 120</p>
+<p> </p>
+<p><strong>Brong Ahafo Region</strong></p>
+<p>Techiman Branch</p>
+<p>Block J, Sector 1</p>
+<p>Tamale Road</p>
+<p>Techiman</p>
+<p>T +233 (0) 352 522060, +233 (0) 352 522062 / 3</p>
+<p>+233 (0) 352 522083</p>
+<p> </p>
+<p><strong>Eastern Region</strong></p>
+<p><strong>Koforidua (Agency)</strong></p>
+<p>Store Number AT16A</p>
+<p>near the roundabout, Koforidua,</p>
+<p>Opposite ADB.</p>
+<p> </p>
+</p>
+
+
+ </div>
+
+ <p><br>
+ </br></p>
+
+      <div style=" height:140px;"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+        
+        
+      </div>
+          
+        </div>
+      
+      
+
+
+
+
+
+
+
+
+
+
+<!--<script type="text/javascript">
+
+
+$('form').submit( function() {
+   
+    $.ajax( {
+      url: 'share.php',
+      type: 'POST',
+      data: new FormData( this ),
+ 
+        success: function (data) {
+            alert('success');
+             window.location.href = "index.html";
+        },
+      
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+
+    return false;
+});
+/*$('form').submit( function() {
+    var postData = $(this).serialize();
+    
+    $.ajax({
+        type: 'POST',
+       data: postData,
+        url: 'share.php',
+        
+        success: function(data){
+            console.log(data);
+            alert('Hapnin Was Shared successfully ');
+            window.location.href = "index.html";
+        },
+        error: function(data){
+            console.log(data);
+            alert('Sharing Unsucessful');
+            window.location.href = "index.html";
+        });
+
+
+   
+    
+    return false;
+});
+    
+    */
+
+        </script>
+
+<!--<script type="text/javascript">
+    
+
+$( 'share' )
+  .submit( function() {
+    $.ajax( {
+      url: 'share.php',
+      type: 'POST',
+      data: new FormData( this ),
+      processData: false,
+      contentType: false,
+
+
+      success: function(FormData){
+           // console.log(data);
+            alert('Sharing sucessful');
+            //window.location.href = "index.html";
+        },
+
+        error: function(FormData){
+            //console.log(data);
+            alert('Sharing unsuccessfully ');
+           // window.location.href = "index.html";
+        }
+        
+   
+
+    } );
+   
+   
+  } );
+    
+    
+    return false;
+});
+    
+    
+
+        </script>-->
+	
+<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/movies-app.js"></script>
+
+
+
+
+
+</body>
+</html>

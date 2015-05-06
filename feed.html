@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>umb</title>
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/movies-app.css">
+
+ 
+
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+  
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+
+
+	
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+</script>
+    
+    
+	  <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/simple-app.css">
+	  <!---<script src="intelxdk.js"></script>
+<script src="xhr.js"></script>-->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>-->
+
+  <!-- <script type="text/javascript" language="javascript">
+$(document).ready(function(){
+
+    $('.swiper-slide select').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide input').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+           $('.swiper-slide textarea').on('mousedown touchstart MSPointerDown', function(e){
+           e.stopPropagation();
+   }); 
+});
+   </script>  -->
+
+
+
+
+   <script>
+    $(document).bind("mobileinit", function(){
+    $.mobile.allowCrossDomainPages = true;
+    });
+ </script>
+   <script type="text/javascript" language="javascript">
+
+
+    
+
+   
+   $(document).ready(function() {
+
+      //$("#driver").click(function(event){
+          $.getJSON('getdata.php', function(jd) {
+          $.each(jd, function(index, item){
+
+            //var anchor = document.getElementById('stage1');
+    //var id = $('#stage1').attr('id');
+              
+             $('#stage1').append(  /*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     ' <div class="boxers">  <a href= "detail.html?id=' +jd[index].id+ '"> <div class="article-img-pane" style="margin-bottom:10px;"><img src= "'+ jd[index].img +'" ></div></a><a href= "detail.html?id=' +jd[index].id+ '"><h2 style="text-transform:capitalize;font-weight:bold;margin-bottom:10px;width:100%;color:#00acef;height:10%"> ' + jd[index].newsheader + ' </h2></a><p style="font-size:14px;color:#514f4f;font-weight:normal;">   <img style="width:15px;height:15px;margin-left:5px" src="img/cal.png"/>'+ jd[index].date+ '<p> </div>');
+
+
+
+
+
+
+             //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
+             //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
+        //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
+       
+          });
+      });
+   });
+   
+   
+  
+   </script>
+
+
+</head>
+
+<style>
+
+
+.back{
+  background: url(img/back.png);
+  width:160px;
+  height: 30px;
+  float:left;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 10px;
+  cursor: pointer;
+  
+  }
+  
+  .menu{
+  background: url(img/menu.png);
+  width:30px;
+  height: 30px;
+  float:right;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right:10px;
+  
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  }
+
+</style>
+ 
+
+
+
+<body>
+<div id="header" class="header" style="display:none;width:0;height:0;"> </div>
+
+
+
+		
+            <div class="header">
+<a href="index.html"><div class="back"></div></a>
+
+<a href="settings.html"><div class="menu"></div></a>
+
+<!-- <h1 style="margin-left:120px;font-size:20px;margin-top:17px;color:#fff;font-weight:normal;position:absolute;top:-5px;">News Feed</h1> -->
+</div>
+			
+				
+				
+
+
+
+
+
+
+
+	 <div class="swiper-container swiper-content" style="overflow-y:auto;  ">
+
+
+
+
+
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="overflow-y:auto;  ">
+        <div class="inner">
+
+
+
+         
+<!--<div class="search">
+         <div class="lighter">
+<form id="#search">
+  <span><input type="text" class="search rounded" placeholder="Search per Mood...">
+    <!--<input type="submit" style="background:url(img/search.png);width:42px;height:42px;margin-top:-10px;">-->
+   <!-- </span>
+  
+</form>
+
+</div>
+
+
+
+</div>-->
+            <div id="content" >
+                                
+                                
+         
+<br>
+<div id="txtHint"><!--<b>Loading Today's Hapn'n..... </b>--></div>
+
+        
+
+<!--<div class="boxers">
+
+
+</div>-->
+
+
+    <a href=""> <div class="detailbox1">
+      <div class="article-img-pane imagesizer1" style="margin-bottom:10px;"><img src= "img/ime.png" ></div>
+
+   <h4 style="margin-top:-10px;margin-left:5px"> News Feed </h4>
+
+   <p>fffewf ggre grege reee erher erhh heher eer </p>
+
+
+
+
+
+ </div> </a>
+
+      <p>
+      </p>
+
+    <a href=""> <div class="detailbox1">
+      <div class="article-img-pane imagesizer1" style="margin-bottom:10px;"><img src= "img/imu.png" ></div>
+
+   <h4 style="margin-top:-10px;margin-left:5px;font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;font:'MyriadPro-Regular'"> News Feed </h4>
+
+   <p>fffewf ggre grege reee erher erhh heher eer </p>
+
+
+
+
+
+ </div> </a>
+ <p>
+       </p>
+  <a href=""> <div class="detailbox1">
+      <div class="article-img-pane imagesizer1" style="margin-bottom:10px;"><img src= "img/imf.jpg" ></div>
+
+   <h4 style="margin-top:-10px;margin-left:5px"> News Feed </h4>
+
+   <p>fffewf ggre grege reee erher erhh heher eer </p>
+
+
+
+
+
+ </div> </a>
+
+      <p>
+     </p>
+
+  
+
+
+
+
+   
+
+ </div>
+
+      <div style=" height:40px;"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+        
+        
+      </div>
+          
+        </div>
+      
+      
+
+
+
+
+
+
+
+
+
+
+<!--<script type="text/javascript">
+
+
+$('form').submit( function() {
+   
+    $.ajax( {
+      url: 'share.php',
+      type: 'POST',
+      data: new FormData( this ),
+ 
+        success: function (data) {
+            alert('success');
+             window.location.href = "index.html";
+        },
+      
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+
+    return false;
+});
+/*$('form').submit( function() {
+    var postData = $(this).serialize();
+    
+    $.ajax({
+        type: 'POST',
+       data: postData,
+        url: 'share.php',
+        
+        success: function(data){
+            console.log(data);
+            alert('Hapnin Was Shared successfully ');
+            window.location.href = "index.html";
+        },
+        error: function(data){
+            console.log(data);
+            alert('Sharing Unsucessful');
+            window.location.href = "index.html";
+        });
+
+
+   
+    
+    return false;
+});
+    
+    */
+
+        </script>
+
+<!--<script type="text/javascript">
+    
+
+$( 'share' )
+  .submit( function() {
+    $.ajax( {
+      url: 'share.php',
+      type: 'POST',
+      data: new FormData( this ),
+      processData: false,
+      contentType: false,
+
+
+      success: function(FormData){
+           // console.log(data);
+            alert('Sharing sucessful');
+            //window.location.href = "index.html";
+        },
+
+        error: function(FormData){
+            //console.log(data);
+            alert('Sharing unsuccessfully ');
+           // window.location.href = "index.html";
+        }
+        
+   
+
+    } );
+   
+   
+  } );
+    
+    
+    return false;
+});
+    
+    
+
+        </script>-->
+	
+<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/movies-app.js"></script>
+
+
+
+
+
+</body>
+</html>

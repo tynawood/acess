@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+ <style>
+
+
+.back{
+  background: url(../img/back.png);
+  width:160px;
+  height: 30px;
+  float:left;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  
+  }
+  
+  .menu{
+  background: url(../img/menu.png);
+  width:30px;
+  height: 30px;
+  float:right;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right:10px;
+  
+  }
+  .header {
+  height: 40px;
+  width: 100%;
+  background-color:#fff ;
+  /*background:url(../img/hapn%27n.png) no-repeat;*/
+  position:relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+
+  /*left:30%;*/
+
+  z-index: 1000;
+  
+  /*background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+  background-image: -webkit-linear-gradient(top, #333, #111);
+  background-image:    -moz-linear-gradient(top, #333, #111);
+  background-image:      -o-linear-gradient(top, #333, #111);
+  background-image:         linear-gradient(to bottom, #333, #111);*/
+  /*border-bottom:#F00 1px solid;*/
+  
+}
+
+  
+  
+  
+  }
+  
+  
+  
+  
+
+</style>
+
+<script type="text/javascript">
+    var auto_refresh = setInterval(
+        function ()
+        {
+        $('.ul').load('index.html');
+        }, 10000); // refresh every 10000 milliseconds
+
+</script>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Simple Responsive Chat / Messenger</title>
+
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Lato:300,400'>
+
+    <link rel="stylesheet" href="css/style.css">
+     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+      <script type="text/javascript" language="javascript">
+   $(document).ready(function() {
+$('html, body').animate({ scrollTop: $(document).height() }, 500);
+    var id= window.location.search.substring(4);
+//alert(id);
+    $('#id').val(id);
+    //alert(id);
+      //$("#driver").click(function(event){
+          $.getJSON('poster.php?id='+id, function(jd) {
+          $.each(jd, function(index, item){
+             $('#stage1').html('<p>  ' + jd[index].chatone+ '</p>');
+             //$('#stage2').append('<div class="chat-message clearfix">  <img src="img/client.jpg" alt="" width="32" height="32"> ','<div class="chat-message-content clearfix">','<span class="chat-time">  ' + jd[index].time+ '</span','<h5 >'+ jd[index].chatname+'</h5>', '<p >  ' + jd[index].message+ '</p>',
+
+         
+          // $('#chatname').val(' ' + jd[index].chatone+ '');
+
+          // '</div>', ' </div>','<hr>');
+             //$('#stage3').append('<ul class="messages" >','<li class="message">'  ,' <h1 class="name"> ' + jd[index].chatename+ '</h1> <img src="http://lorempixel.com/200/200" class="user"/>','<p >  ' + jd[index].message+ '</p>' ,'</li>','</ul>');
+             $('#stage4').append( '<li class="message" >',
+    '<h1 class="name">' + jd[index].chatname + '</h1><img src="http://lorempixel.com/200/200" class="user"/>',
+    '<p class="text">' + jd[index].message+ '</p>',
+  '</li>','<hr>');
+        //$('#stage4').append('<p> Image:'+jd[index].chatone+'</p>');
+       
+          });
+      });
+   });
+   
+   
+  
+   </script>
+
+
+</head>
+
+<body>
+
+<div class="header">
+<a href="index.html"><div class="back"></div></a>
+
+<a href="settings.html"><div class="menu"></div></a>
+
+</div>
+<p class="description"><em>Welcome  <em id="stage1"></em> to Access Bank Live Support ,We will be with you Shortly.....</em></p>
+
+
+<ul class="messages"  >
+
+
+  <li class="message" id="stage4">
+    
+  </li>
+ <!-- <li class="message">
+    <h1 class="name">Nic Cage</h1><img src="http://lorempixel.com/210/210" class="user"/>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta condimentum ante id tristique. Nulla eget vestibulum dolor.</p>
+  </li>-->
+</ul>
+
+<form method="post">
+  <input type="hidden"  name="chatid" id="id" />
+<input type="hidden"  name="chat_person" value="Access Live Support " id="chatname" />
+ <textarea id="bottom" type="text" name="message" placeholder="Type your message…" autofocus style=" position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  height: 50px;
+  -webkit-appearance: none;
+  outline: 0;
+  border-top: 3px solid #3e3e3e;
+  background: rgba(255, 255, 255, 0.7);"></textarea>
+<div class="actions">
+ <!--<input type="submit" name="submit" value="send" >-->
+ <button type="submit" name="submit">Send</button>
+</div>
+</form>
+
+
+
+
+<script type="text/javascript">
+
+
+$( 'form' )
+  .submit( function() {
+    $.ajax( {
+      url: 'chatpost.php',
+      type: 'POST',
+      data: new FormData( this ),
+      processData: false,
+      contentType: false,
+
+
+      success: function(FormData){
+           // console.log(data);
+           // alert('Sharing sucessful');
+            //window.location.href = "index.html";
+        },
+
+        error: function(FormData){
+            //console.log(data);
+          //  alert('Sharing unsuccessfully ');
+           // window.location.href = "index.html";
+        }
+        
+   
+
+    } );
+   
+   
+  } );
+    
+/*$('form').submit( function() {
+    var postData = $(this).serialize();
+    
+    $.ajax({
+        type: 'POST',
+       data: postData,
+        url: 'share.php',
+        
+        success: function(data){
+            console.log(data);
+            alert('Hapnin Was Shared successfully ');
+            window.location.href = "index.html";
+        },
+        error: function(data){
+            console.log(data);
+            alert('Sharing Unsucessful');
+            window.location.href = "index.html";
+        });
+
+
+   
+    
+    return false;
+});
+    
+    */
+
+        </script>
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

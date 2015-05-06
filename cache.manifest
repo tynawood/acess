@@ -1,0 +1,18 @@
+<? header('Content-Type: text/cache-manifest'); ?>
+CACHE MANIFEST
+# version 0.0.4
+
+CACHE:
+css/idangerous.swiper.css
+css/movies-app.css
+css/normalize.css
+css/simple-app.css
+css/style.css
+js/idangerous.swiper-2.0.min.js
+js/jquery-1.7.1.min.js
+js/movies-app.js
+appframework/af.ui.css
+appframework/appframework.ui.min.js
+
+NETWORK:
+*
