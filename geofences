@@ -1,0 +1,70 @@
+
+<html>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<body onload="initialize_map()">
+ <div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+
+
+<script>
+var boundaryColor = '#ED1B24'; // initialize color of polyline
+var polyCoordinates =[]; // initialize an array where we store latitude and longitude pair
+var count=0;
+function initialize_map()
+{
+ // Initializing a map
+ var latlng = new google.maps.LatLng(29.392971,79.454051); // latitude is 29.392971,longitude: 79.454051
+ var myOptions = {
+ zoom: 9,
+ center: latlng,
+ mapTypeId: google.maps.MapTypeId.ROADMAP
+ };
+ // Draw a map on DIV "map_canvas"
+ map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+ // Listen Click Event to draw Polygon
+ google.maps.event.addListener(map, 'click', function(event) {
+ polyCoordinates[count] = event.latLng;
+ createPolyline(polyCoordinates);
+ count++;
+ });
+}
+
+
+
+
+
+</script>
+<script>
+//Function to create Polyline
+function createPolyline(polyC)
+{
+ Path = new google.maps.Polyline({
+ path: polyC,
+ strokeColor: boundaryColor,
+ strokeOpacity: 1.0,
+ strokeWeight: 2
+ });
+ Path.setMap(map);
+}
+</script>
+
+<input type=button name="btnconnect" value="Connect Points" onclick="connectPoints();" />
+
+<script>
+
+function connectPoints()
+{
+ var point_add = []; // initialize an array
+ var start = polyCoordinates[0]; // storing start point
+ var end = polyCoordinates[(polyCoordinates.length-1)]; // storing end point
+ // pushing start and end point to an array
+ point_add.push(start);
+ point_add.push(end);
+ createPolyline(point_add); // function to join points
+ 
+}
+
+</script>
+
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+  <style>
+
+
+.back{
+  background: url(img/back.png);
+  width:68px;
+  height: 30px;
+  float:left;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  
+  }
+  
+  .menu{
+  background: url(img/menu.png);
+  width:30px;
+  height: 30px;
+  float:right;
+  font-size:30px;
+  position:relative;
+  /*left:-28%;*/
+  color:#CCC;
+  margin-left:10px;
+  margin-top: 3px;
+  cursor: pointer;
+  margin-right:10px;
+  
+  
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+
+</style>
+ 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>Hapnin</title>
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/movies-app.css">
+	
+  <link type="text/css" rel="stylesheet" href="boot.min.css">
+
+    
+    
+	  <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+    <!--<script type="text/javascript">
+
+    
+
+  
+
+ 
+         
+
+
+         $(document).ready(function() {
+function newDoc() {
+    var share_pin= window.location.search.substring(11);
+
+     //alert(share_pin);
+}
+      //$("#driver").click(function(event){
+         $.getJSON('event.php?share_pin='+share_pin, function(jd) {
+          $.each(jd, function(index, item){
+
+            //var anchor = document.getElementById('stage1');
+    //var id = $('#stage1').attr('id');
+              
+             $('#stage1').append(  '   <div class="tag">  <img src= "'+jd[index].tag+'"></div>',/*'<p class="posts-summary">  ' + jd[index].detail + '</p>',*/     ' <div class="boxers">  <a href= "detail.html?id=' +jd[index].id+ '"> <div class="article-img-pane" style="margin-bottom:10px;"><img src= "'+ jd[index].img +'" ></div></a><a href= "detail.html?id=' +jd[index].id+ '"><h2 style="text-transform:capitalize;font-size:14px;margin-bottom:10px;width:100%;"> ' + jd[index].what + ' @ ' + jd[index].location+'</h2></a><p style="font-size:14px;"> '+ jd[index].date+ ' at ' + jd[index].time+ '<p> </div>');
+
+
+
+
+
+
+             //$('#stage2').append('<p>date : ' + jd[index].date+ '</p>');
+             //$('#stage3').append('<p> Detail: ' + jd[index].detail+ '</p>');
+        //$('#stage4').append('<p> Image: <img src= "'+jd[index].img+'"></p>');
+       
+          });
+      });
+   });
+   </script>-->
+</head>
+
+
+    
+  
+
+
+
+
+
+<body>
+
+  <div class="header">
+<a href="index.html"><div class="back"></div></a>
+
+<a href="settings.html"><div class="menu"></div></a>
+
+<h1 style="margin-left:120px;font-size:20px;margin-top:10px;color:#fff;font-weight:normal;position:absolute;top:-5px;">ATM/Branch Locator</h1>
+</div>
+	
+		<div class="swiper-wrapper">
+  
+         <!--<div class="swiper-slide "> <a href="#" class="active">Hapn'n</a> <a href="#" style="margin:0 17px">Tab 2</a> <a href="#">Tab 3</a> </div>-->
+             <div class="inner">
+
+ <div style=" height:200px;"> </div>
+
+
+
+
+              <form method="get" action="myhapnin.html" >
+         <div class="input-group" style="border:#fff;">
+
+          <input type="text"  name="share_pin" class="form-control" required Placeholder="Check for the nearest ATM" style=
+            "font-size:15px; "   ><span
+                    class="input-group-btn">
+
+
+
+                    <input type="submit" value="Locate"  class="btn btn-primary"  style="height:34px;font-size:13px;background:#f4b11e;border:#f4b11e;">Locate</a></span></div>
+
+
+
+  </div>
+
+</form>
+
+<article id="stage1"></article>
+
+
+
+
+
+			
+
+<script src="js/jquery.min.js"></script>
+	<!-- Don't forget to get the latest Swiper and scrollbar version here-->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/movies-app.js"></script>
+
+    
+    <!-- <script>
+  var tabsSwiper = new Swiper('.swiper-container',{
+    onlyExternal : true,
+    speed:500
+  })
+  $(".tabs a").on('touchstart mousedown',function(e){
+    e.preventDefault()
+    $(".tabs .active").removeClass('active')
+    $(this).addClass('active')
+    tabsSwiper.swipeTo( $(this).index() )
+  })
+  $(".tabs a").click(function(e){
+    e.preventDefault()
+  })
+  </script>-->
+  
+</body>
+</html>
