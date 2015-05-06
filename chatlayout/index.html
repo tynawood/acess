@@ -140,7 +140,7 @@ $('html,body').animate({ scrollTop: $(document).height() }, 100);
     $('#id').val(id);
     //alert(id);
       //$("#driver").click(function(event){
-          $.getJSON('poster.php?id='+id, function(jd) {
+          $.getJSON('http://ofmghonline.com/access/chatlayout/poster.php?id='+id, function(jd) {
           $.each(jd, function(index, item){
              $('#stage1').html('<p>  ' + jd[index].chatone+ '</p>');
              //$('#stage2').append('<div class="chat-message clearfix">  <img src="img/client.jpg" alt="" width="32" height="32"> ','<div class="chat-message-content clearfix">','<span class="chat-time">  ' + jd[index].time+ '</span','<h5 >'+ jd[index].chatname+'</h5>', '<p >  ' + jd[index].message+ '</p>',

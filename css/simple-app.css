@@ -16,9 +16,14 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 1.5;
-	background: #fff;
+	/*background: #000;*/
 	color: #000;
 	overflow-x:hidden;
+	background:url(../img/bg.png) no-repeat;
+	position: relative;
+	max-width:100%;
+	height: auto; 
+
 	
 	
 }
@@ -79,7 +84,7 @@ margin:-8px -15px 0 -15px;
 
 
 .header {
-	height: 58px;
+	height: 48px;
 	width: 100%;
 	background-color:#fff;
 	/*background:transparent;*/
@@ -444,7 +449,7 @@ article .article-img-pane img { height:100%; max-width: inherit; }
 
 
 
-								.detailbox{background:#fff;
+								.detailbox{background:rgba(0, 0, 0, 0.2);
 									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 	font-size: 13px;border-left: 5px #203063 solid;
 
@@ -468,33 +473,33 @@ font-size: 14px;
 
 
 
-								.detailboxrequest{background:#fff;
+								.detailboxrequest{background:rgba(0, 0, 0, 0.2);
 									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 	font-size: 13px;border-left: 5px #1d427c solid;margin-top: -20px;
 
 									font-size:16px ;font: 'Myriad Pro Regular'  text-transform:capitalize;margin-bottom:0px;width:100%;position:relative;margin-left: 0px;height:50px;line-height: 50px;text-indent: 60px;}
 
-									.detailboxlocator{background:#fff;
+									.detailboxlocator{background:rgba(0, 0, 0, 0.2);
 									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 	font-size: 13px;border-left: 5px #b62227 solid;margin-top: -20px;
 
 									font-size:16px ;font: 'Myriad Pro Regular'  text-transform:capitalize;margin-bottom:0px;width:100%;position:relative;margin-left: 0px;height:50px;line-height: 50px;text-indent: 60px;}
 
-.detailboxchat{background:#fff;
+.detailboxchat{background:rgba(0, 0, 0, 0.2);
 									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 	font-size: 13px;border-left: 5px #f5a61c solid;margin-top: -20px;
 
 									font-size:16px ;font: 'Myriad Pro Regular'  text-transform:capitalize;margin-bottom:0px;width:100%;position:relative;margin-left: 0px;height:50px;line-height: 50px;text-indent: 60px;}
 
 						
-.detailboxcall{background:#fff;
+.detailboxcall{background:rgba(0, 0, 0, 0.2);
 									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 	font-size: 13px;border-left: 5px #e84a24 solid;margin-top: -20px;
 
 									font-size:16px ;font: 'Myriad Pro Regular'  text-transform:capitalize;margin-bottom:0px;width:100%;position:relative;margin-left: 0px;height:50px;line-height: 50px;text-indent: 60px;}
 
 
-.detailboxfence{background:#fff;
+.detailboxfence{background:rgba(0, 0, 0, 0.2);
 									box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
 	font-size: 13px;border-left: 5px #ee8022 solid;margin-top: -20px;
 
